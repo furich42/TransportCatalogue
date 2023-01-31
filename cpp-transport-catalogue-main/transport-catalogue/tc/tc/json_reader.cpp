@@ -6,22 +6,11 @@ using namespace std;
 using namespace json;
 using namespace std::literals;
 
-
-/*
- * Здесь можно разместить код наполнения транспортного справочника данными из JSON,
- * а также код обработки запросов к базе и формирование массива ответов в формате JSON
- */
-
-
 std::string Print(const Node& node) {
     std::ostringstream out;
     Print(json::Document{node}, out);
     return out.str();
 }
-
-
-
-
 
 
 namespace input {
@@ -100,12 +89,6 @@ renderer::Settings JSONReader::ReadSettingsFromJSON(json::Dict& info) {
         
         
     }
-        
-        
-       // std::optional<Point> bus_label_offset = std::nullopt;
-       // std::optional<Point> stop_label_offset = std::nullopt;
-       // std::optional<Rgba> underlayer_color = std::nullopt;
-       // std::optional<std::vector<Color>> color_palette = std::nullopt;
     
     return settings;
 }
