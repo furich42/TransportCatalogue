@@ -1,8 +1,5 @@
 #pragma once
 
-/*
- * Здесь можно разместить код транспортного справочника
- */
 #include <vector>
 #include <string>
 #include <istream>
