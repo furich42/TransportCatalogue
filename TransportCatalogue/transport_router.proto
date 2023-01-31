@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package tc_pb;
+
+import "graph.proto";
+
+message RoutingSettings {
+    double bus_wait_time = 1;
+    double bus_velocity = 2;
+}
+
+
+message TransportRouter {
+    DirectedWeightedGraph route_graph = 1;
+    repeated int32 vertex_index_to_stop = 2;
+    repeated BusId edge_index_to_bus = 3;
+}
+message PrevEdgeId {
+    uint32 prev_edge_id = 1;
+}
+
+message RouteInternalData {
+    BusRouteWeight weight = 1;
+    PrevEdgeId prev_edge = 2;
+}
+
+message RouteInternalDataRow {
+    repeated RouteInternalData route_internal_data_row = 1;
+}
+
+message Router {
+    repeated RouteInternalDataRow routes_internal_data = 1;
+}
+

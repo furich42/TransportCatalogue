@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package tc_pb;
+
+message Point {
+    double x = 1;
+    double y = 2;
+}
+
+message Rgb {
+    int32 red = 1;
+    int32 green = 2;
+    int32 blue = 3;
+}
+
+message Rgba {
+    int32 red = 1;
+    int32 green = 2;
+    int32 blue = 3;
+    double opacity = 4;
+}
+
+message Color {
+
+    Rgb rgb_color = 1;
+    Rgba rgba_color = 2;
+    string string_color = 3;
+    bool is_initialized = 4;
+}
+
+
+

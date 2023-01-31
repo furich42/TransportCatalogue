@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package tc_pb;
+
+
+
+message BusRouteWeight {
+    double time = 1;
+    int32 span = 2;
+}
+
+message Edge {
+    uint32 vertex_id_from = 1;
+    uint32 vertex_id_to = 2;
+    BusRouteWeight weight = 3;
+}
+
+message IncidenceList {
+    repeated uint32 edge_id = 1;
+}
+
+message DirectedWeightedGraph {
+    repeated Edge edges = 1;
+    repeated IncidenceList incidence_lists = 2;
+}
+
+message BusId {
+    int32 bus_id = 1;
+    bool IsInitialized = 2;
+}
