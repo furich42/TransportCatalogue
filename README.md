@@ -7,8 +7,8 @@
 ## Сборка
 
 ```
-cd TransportCatalogue
 mkdir build
+cd build
 cmake ../
 cmake --build .
 ```
